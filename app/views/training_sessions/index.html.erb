@@ -3,3 +3,17 @@
 <% @sessions.each do |session| %>
   <%= session.category%> for <%= session.cost %>
 <% end %>
+
+
+<div class="index-container border border-primary">
+  <div class="cards-container border border-secondary">
+    <%= render 'shared/card' %>
+    <%= render 'shared/card' %>
+    <%= render 'shared/card' %>
+  </div>
+  <div class="map border border-secondary">
+  </div>
+</div>
+
+
+
