@@ -6,13 +6,15 @@
   display: flex;
   align-items: center;
   margin: 20px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .card-product:hover {
   padding: 3px;
-  box-shadow: 0px 0px 10px 0px grey
+  box-shadow: 0px 0px 10px 0px grey;
+   cursor: pointer;
 }
+
 
 .card-product img {
   height: 100%;

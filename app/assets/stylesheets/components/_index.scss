@@ -4,7 +4,8 @@
 @import "navbar";
 
 .index-container {
-  display: flex
+  display: flex;
+  margin: 80px;
 }
 
 .cards-container {
@@ -15,4 +16,9 @@
 
 body {
   background-color: white;
+}
+
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
 }
