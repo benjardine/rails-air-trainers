@@ -1,15 +1,9 @@
-<h1>TrainingSessions#index</h1>
-<p>Find me in app/views/training_sessions/index.html.erb</p>
-<% @sessions.each do |session| %>
-  <%= session.category%> for <%= session.cost %>
-<% end %>
 
 <%= link_to "+ New Session", new_training_session_path %>
 <div class="index-container border border-primary">
   <div class="cards-container border border-secondary">
-    <%= render 'shared/card' %>
-    <%= render 'shared/card' %>
-    <%= render 'shared/card' %>
+    <h2 class="section-title">Training next to you</h2>
+    <%= render "shared/card", sessions: @sessions %>
   </div>
   <div class="map border border-secondary">
   </div>

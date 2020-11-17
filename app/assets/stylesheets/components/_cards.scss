@@ -4,15 +4,17 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  // align-items: center;
   margin: 20px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .card-product:hover {
   padding: 3px;
-  box-shadow: 0px 0px 10px 0px grey
+  box-shadow: 0px 0px 10px 0px grey;
+  cursor: pointer;
 }
+
 
 .card-product img {
   height: 100%;
@@ -36,4 +38,13 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-product-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-text p {
+  padding-left: 16px;
 }
