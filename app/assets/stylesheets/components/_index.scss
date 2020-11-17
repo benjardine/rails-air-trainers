@@ -2,3 +2,17 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.index-container {
+  display: flex
+}
+
+.cards-container {
+  width: 60%;
+  padding: 20px;
+  margin: 20px;
+}
+
+body {
+  background-color: white;
+}
