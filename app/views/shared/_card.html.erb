@@ -1,7 +1,16 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
-</div>
+<% @sessions.each do |s| %>
+
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
+    <div class="product-text">
+      <div class="card-product-infos">
+        <h2><%= s.category %></h2>
+        <h2>£<%= s.cost %></h2>
+      </div>
+      <div>
+        <p><%= s.description %></p>
+      </div>
+    </div>
+
+<% end %>
