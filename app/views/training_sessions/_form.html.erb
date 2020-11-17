@@ -1,0 +1,21 @@
+
+<div id="container">    
+  <div id="row" class="d-flex justify-content-center p-3">
+    <div class="my-6">
+      <h1 id="index-title" class="my-5">Air Trainers</h1>
+      <div class="form-container flex-column" >
+        <h3>New Training Session</h3>
+      <div class="row m-2 justify-content-center">
+        <%= simple_form_for [@session] do |f| %>
+            <%= f.input :category %>
+            <%= f.input :cost %>
+            <%= f.input :description %>
+            <%= f.input :start_time %>
+            <%= f.input :end_time%>
+            <%= f.submit 'New Training Session', class: 'btn btn-primary' %>
+        <% end %>
+        </div>  
+      </div> 
+    </div>
+  </div> 
+</div>   
