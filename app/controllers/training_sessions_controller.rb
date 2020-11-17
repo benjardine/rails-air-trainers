@@ -1,4 +1,5 @@
 class TrainingSessionsController < ApplicationController
+  before_action :set_cocktail, only: [ :update]
   def index
     @sessions = TrainingSession.all
   end
@@ -15,6 +16,14 @@ class TrainingSessionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit 
+  end
+
+  def update
+    @session.update(strong_params)
+    redirect_to training_sessions_path(@session.id)
   end
 
   private 

@@ -4,7 +4,7 @@
   <%= session.category%> for <%= session.cost %>
 <% end %>
 
-
+<%= link_to "+ New Session", new_training_session_path %>
 <div class="index-container border border-primary">
   <div class="cards-container border border-secondary">
     <%= render 'shared/card' %>
