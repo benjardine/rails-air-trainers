@@ -1,13 +1,11 @@
 
-<%= link_to "+ New Session", new_training_session_path %>
 <div class="index-container border border-primary">
   <div class="cards-container border border-secondary">
     <h2 class="section-title">Training next to you</h2>
+    <%= link_to "+Add a New Session", new_training_session_path %>
     <%= render "shared/card", sessions: @sessions %>
   </div>
   <div class="map border border-secondary">
   </div>
 </div>
-
-
 
