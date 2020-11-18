@@ -19,8 +19,14 @@
       <p><%=@t_session.description%></p>
     </div>
     <div class="training-content__cart">
+
       <h3>Your basket is empty</h3>
       <p>£<%=@t_session.cost%></p>
+
+            <%= simple_form_for [@t_session, @booking] do |f| %>        
+            <%= f.submit 'New Training Session', class: 'btn btn-primary' %>
+        <% end %>
+
     </div>
   </div>
 
