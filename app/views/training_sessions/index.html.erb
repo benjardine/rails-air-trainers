@@ -1,8 +1,12 @@
 
 
-<div class="index-container">
-  <div class="myBtnContainer">
 
+
+<div class="index-container">
+   <div class="cards-container">
+      <h2 class="section-title">Training next to you</h2>
+      <div class="container">
+    <div class="myBtnContainer">
     <div class="row">
     <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-category" %>
     <%= link_to "Boxing", training_sessions_path(:query => "Boxing"), class:"btn btn-category" %>
@@ -15,12 +19,12 @@
     <%= link_to "Kickboxing", training_sessions_path(:query => "Kickboxing"), class:"btn btn-category" %>
     <%= link_to "Pilates", training_sessions_path(:query => "Pilates"), class:"btn btn-category" %>
     </div>
-    <div class="cards-container">
-      <h2 class="section-title">Training next to you</h2>
+  </div>
+</div>
       <%= link_to "+Add a New Session", new_training_session_path %>
       <%= render "shared/card", t_session: @t_session %>
     </div>
-  </div>
+
 
 
 
