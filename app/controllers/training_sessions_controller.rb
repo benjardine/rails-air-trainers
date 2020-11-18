@@ -1,5 +1,6 @@
 class TrainingSessionsController < ApplicationController
-  before_action :set_cocktail, only: [ :update]
+  before_action :set_training_session, only: [ :update]
+
   def index
     @t_sessions = TrainingSession.all
     @markers = @t_sessions.geocoded.map do |t_session|
@@ -40,6 +41,6 @@ class TrainingSessionsController < ApplicationController
   end
 
   def strong_params
-    params.require(:t_session).permit(:category,:description, :cost, :start_time, :end_time, :photo)
+    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo)
   end
 end
