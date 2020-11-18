@@ -6,12 +6,14 @@
       <div class="form-container flex-column" >
         <h3>New Training Session</h3>
       <div class="row m-2 justify-content-center">
-        <%= simple_form_for [@session] do |f| %>
+        <%= simple_form_for [@t_session] do |f| %>
             <%= f.input :category %>
+            <%= f.input :photo, as: :file %>
             <%= f.input :cost %>
             <%= f.input :description %>
             <%= f.input :start_time %>
             <%= f.input :end_time%>
+            
             <%= f.submit 'New Training Session', class: 'btn btn-primary' %>
         <% end %>
         </div>  

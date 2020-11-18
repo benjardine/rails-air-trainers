@@ -1,16 +1,16 @@
-<% @sessions.each do |s| %>
+<% @t_sessions.each do |t_session| %>
 
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>
 
     <div class="product-text">
       <div class="card-product-infos">
-        <h2><%= s.category %></h2>
-        <h2>£<%= s.cost %></h2>
+        <h2><%= t_session.category %></h2>
+        <h2>£<%= t_session.cost %></h2>
       </div>
       <div>
-        <p><%= s.description %></p>
+        <p><%= t_session.description %></p>
       </div>
     </div>
-
+  </div>
 <% end %>
