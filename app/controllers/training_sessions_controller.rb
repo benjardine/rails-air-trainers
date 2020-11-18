@@ -1,7 +1,12 @@
 class TrainingSessionsController < ApplicationController
-  before_action :set_cocktail, only: [ :update]
+  before_action :set_training_session, only: [ :update, :show]
+
   def index
-    @t_sessions = TrainingSession.all
+    if params[:query].present?
+      @t_sessions = TrainingSession.where(category: params[:query])
+    else
+      @t_sessions = TrainingSession.all
+    end
     @markers = @t_sessions.geocoded.map do |t_session|
       {
         lat: t_session.latitude,
@@ -44,6 +49,6 @@ class TrainingSessionsController < ApplicationController
   end
 
   def strong_params
-    params.require(:t_session).permit(:category,:description, :cost, :start_time, :end_time, :photo)
+    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo)
   end
 end

@@ -13,13 +13,18 @@ TrainingSession.destroy_all
 User.destroy_all
 
 
-puts "Creating fake data"
-User.create!(name: "Jacque", email:"ffreak@gmail.com", password:"password", phone_number: "07866372818")
-
 puts "Creating a trainer"
+jessica = User.create!(name: "Jessica", email:"fitfreak@gmail.com", password:"password", phone_number: "07866372818")
+
+puts "Creating another trainer"
 joe = User.create!(name: "Joe Trainer", email:"traioner@gmail.com", password:"passwrd", phone_number: "07866372999")
 
 puts "Creating a session"
 session = TrainingSession.new(category: "Yoga", cost: 25, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", start_time: DateTime.new(2020,11,21,7,0,0), end_time: DateTime.new(2020,11,21,8,0,0),date: DateTime.new(2020,11,21), address: "Highbury Park")
 session.trainer = joe
 session.save!
+
+puts "Creating a second session"
+boxing_session = TrainingSession.new(category: "Boxing", cost: 20, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", start_time: DateTime.new(2020,11,22,7,0,0), end_time: DateTime.new(2020,11,22,8,0,0),date: DateTime.new(2020,11,21), address: "Angel")
+boxing_session.trainer = jessica
+boxing_session.save!
