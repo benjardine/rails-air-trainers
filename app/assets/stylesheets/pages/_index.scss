@@ -1,2 +1,16 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+.btn-category {
+  color: #485159;
+  background-color: white;
+  font-size:20px;
+  border: 0.5px solid #485159;
+  padding: 8px 8px;
+  border-radius: 5px;
+  opacity: 0.8;
+  font-weight: light;
+  font-family: "Helvetica";
+  transition: opacity 0.3s ease;
+}
