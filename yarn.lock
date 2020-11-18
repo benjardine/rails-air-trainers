@@ -1506,6 +1506,16 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bideo.js@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bideo.js/-/bideo.js-1.0.0.tgz#9943f7fbda4a3993fa107f18b423d457271ac78a"
+  integrity sha512-nyp60eJindKoSWvvrLaoGuJAU13u3yNc1yPbaQYb0w81yCgR4ufqG1KaBWoF/6WbMXi9HELi7AITG79IHNLW4Q==
+
+bideo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bideo/-/bideo-1.0.0.tgz#30f9c9f07f661c9ce55b18e6c07917ccc0d6dd58"
+  integrity sha1-MPnJ8H9mHJzlWxjmwHkXzMDW3Vg=
+
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"

@@ -1,0 +1,40 @@
+
+
+// #container {
+//   overflow: hidden;
+//   position: absolute;
+//   top: 0; left: 0; right: 0; bottom: 0;
+// }
+
+#background_video {
+  //transform: translate(-50%, -50%);
+
+  object-fit: cover;
+  height: 100%; width: 100%;
+}
+
+// #video_cover {
+//   position: absolute;
+//   background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunset-quotes-21-1586531574.jpg?crop=1.00xw:0.752xh;0,0.0601xh&resize=768:*') no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+
+// #overlay {
+//   position: absolute;
+//   top: 0; right: 0; left: 0; bottom: 0;
+// }
+
+#main_content {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  // background-color:rgba(1,1,1,0.1);
+  padding:10px 10px 50px 10px;
+  /* Vertical center */
+  top: 50%;
+  transform: translateY(-50%);
+}

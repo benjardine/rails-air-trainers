@@ -1,4 +1,6 @@
 // Specific CSS for your home-page
+@import "components/banner";
+
 .navbar {
   position: fixed;
   top: 0;
@@ -56,7 +58,7 @@
   background-color: #D4D9D2;
   margin:none;
   color: #95A092;
-  padding:100px 50px;
+  padding:70px 50px;
 }
 
 .container {
