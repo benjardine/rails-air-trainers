@@ -2,7 +2,11 @@ class TrainingSessionsController < ApplicationController
   before_action :set_training_session, only: [ :update]
 
   def index
-    @t_sessions = TrainingSession.all
+    if params[:query].present?
+      @t_sessions = TrainingSession.where(category: params[:query])
+    else
+      @t_sessions = TrainingSession.all
+    end
     @markers = @t_sessions.geocoded.map do |t_session|
       {
         lat: t_session.latitude,
@@ -26,7 +30,7 @@ class TrainingSessionsController < ApplicationController
     end
   end
 
-  def edit 
+  def edit
   end
 
   def update
@@ -34,7 +38,7 @@ class TrainingSessionsController < ApplicationController
     redirect_to training_sessions_path(@t_session.id)
   end
 
-  private 
+  private
 
   def set_training_session
     @t_session = TrainingSession.find(params[:id])

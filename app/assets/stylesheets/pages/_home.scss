@@ -79,11 +79,13 @@
   margin-bottom:20px;
   opacity: .8;
   filter: sepia(60%);
+
 }
 
 .card-category:hover {
   opacity: 1;
   filter:none;
+  transform:scale(1.1);
 }
 
 .trainer-container {
