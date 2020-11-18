@@ -1,5 +1,5 @@
 class TrainingSessionsController < ApplicationController
-  before_action :set_training_session, only: [ :update]
+  before_action :set_training_session, only: [ :update, :show]
 
   def index
     if params[:query].present?
@@ -31,6 +31,10 @@ class TrainingSessionsController < ApplicationController
   end
 
   def edit
+  end
+
+  def show
+    @t_session = TrainingSession.find(params[:id])
   end
 
   def update
