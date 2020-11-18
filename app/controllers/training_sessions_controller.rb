@@ -25,7 +25,11 @@ class TrainingSessionsController < ApplicationController
     end
   end
 
-  def edit 
+  def edit
+  end
+
+  def show
+    @t_session = TrainingSession.find(params[:id])
   end
 
   def update
@@ -33,7 +37,7 @@ class TrainingSessionsController < ApplicationController
     redirect_to training_sessions_path(@t_session.id)
   end
 
-  private 
+  private
 
   def set_training_session
     @t_session = TrainingSession.find(params[:id])
