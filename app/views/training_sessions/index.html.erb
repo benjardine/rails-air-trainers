@@ -1,4 +1,3 @@
-
 <div class="index-container">
   <div id="myBtnContainer">
     <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-primary" %>
@@ -20,4 +19,22 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
+</div>
+=======
+<div class="large-container border border-primary"> 
+<div class="index-container border border-primary">
+  <div class="cards-container border border-secondary">
+      <h2 class="section-title">Training next to you</h2>
+      <%= link_to "+Add a New Session", new_training_session_path %>
+      <%= render "shared/card", t_sessions: @t_sessions %>
+  </div>
+  <div class="map border border-secondary">
+    <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>
+
 </div>
