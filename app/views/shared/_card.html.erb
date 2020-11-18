@@ -1,11 +1,11 @@
 <% @t_sessions.each do |t_session| %>
 
   <div class="card-product">
-    <%#= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>
-
+    <%= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>
+     
     <div class="product-text">
       <div class="card-product-infos filterDiv t_session.category">
-        <h2><%= t_session.category %></h2>
+        <h2><%= link_to t_session.category, training_session_path(t_session.id) %></h2>
         <h2>£<%= t_session.cost %></h2>
       </div>
       <div>

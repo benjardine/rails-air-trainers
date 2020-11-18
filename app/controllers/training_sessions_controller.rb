@@ -35,6 +35,7 @@ class TrainingSessionsController < ApplicationController
 
   def show
     @t_session = TrainingSession.find(params[:id])
+    @booking = Booking.new
   end
 
   def update
@@ -49,6 +50,6 @@ class TrainingSessionsController < ApplicationController
   end
 
   def strong_params
-    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo)
+    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo, :id)
   end
 end
