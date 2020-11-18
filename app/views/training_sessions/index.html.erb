@@ -1,15 +1,19 @@
 <div class="index-container">
   <div id="myBtnContainer">
+    <div class="row">
     <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-category" %>
     <%= link_to "Boxing", training_sessions_path(:query => "Boxing"), class:"btn btn-category" %>
     <%= link_to "Weights", training_sessions_path(:query => "Weights"), class:"btn btn-category" %>
     <%= link_to "Kettle Bells", training_sessions_path(:query => "Kettle Bells"), class:"btn btn-category" %>
+    </div>
+    <div class="row">
     <%= link_to "Running", training_sessions_path(:query => "Running"), class:"btn btn-category" %>
     <%= link_to "Spinning", training_sessions_path(:query => "Spinning"), class:"btn btn-category" %>
     <%= link_to "Kickboxing", training_sessions_path(:query => "Kickboxing"), class:"btn btn-category" %>
     <%= link_to "Pilates", training_sessions_path(:query => "Pilates"), class:"btn btn-category" %>
+    </div>
     <div class="cards-container">
-      <h2 class="section-title">Training next to you</h2>
+      <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
       <%= link_to "+Add a New Session", new_training_session_path %>
       <%= render "shared/card", t_session: @t_session %>
     </div>
