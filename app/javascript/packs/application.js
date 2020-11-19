@@ -31,6 +31,7 @@ import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { backgroundVideo } from '../plugins/bideo';
 
 
 
@@ -38,7 +39,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
   initMapbox();
-  initAutocomplete;
+  initAutocomplete();
+  backgroundVideo();
 });
 
 
