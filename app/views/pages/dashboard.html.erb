@@ -7,12 +7,13 @@
   <h2 class="dashboard-title">Your upcoming bookings</h2>
   <div class="dashboard-upcoming-bookings">
     <!-- Cards -->
-
     <div class="dashboard-card">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="dashboard-card-infos">
-        <h2>Product name</h2>
-        <p>27 Dec. 2020</p>
+        <h2><%= @bookings.first.training_session.description %></h2>
+        <o>Trainer: <%= @bookings.first.training_session.trainer.name %>
+        <p><%= @bookings.first.training_session.start_time %></p>
+        <p><%= @bookings.first.training_session.address %></p>
       </div>
     </div>
 
