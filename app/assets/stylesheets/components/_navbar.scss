@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #CBD1C9;
-  background-color:transparent;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,4 +16,13 @@
 .navbar-brand h1 {
   font-size: 60px;
   margin-top:20px;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #CBD1C9 !important;
+  transition: background-color 500ms linear;
 }
