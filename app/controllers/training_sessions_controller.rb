@@ -5,8 +5,6 @@ class TrainingSessionsController < ApplicationController
     @categories = ["Yoga", "Running", "Boxing", "Weights", "Kettle Bells", "Spinning", "Kickboxing", "Pilates"]
     if params[:query].present?
       @t_sessions = TrainingSession.global_search(params[:query])
-    else
-      @t_session = TraningSession.all
       @markers = @t_sessions.geocoded.map do |t_session|
         {
           lat: t_session.latitude,
@@ -15,7 +13,9 @@ class TrainingSessionsController < ApplicationController
         }
       end
         @query = params[:query]
-      end
+    else
+      @t_sessions = TrainingSession.all
+    end
   end
 
   def new
@@ -52,6 +52,6 @@ class TrainingSessionsController < ApplicationController
   end
 
   def strong_params
-    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo)
+    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo, :id)
   end
 end
