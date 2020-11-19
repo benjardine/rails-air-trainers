@@ -1,5 +1,6 @@
 <% @t_sessions.each do |t_session| %>
 
+
   <div class="card-product">
     <% if t_session.photo.attached?  %>
       <%= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>

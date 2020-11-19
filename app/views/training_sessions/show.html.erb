@@ -1,39 +1,62 @@
-<div class="container mt-2">
+<div class="main-container">
+  <div class="row">
+    <div class="col-12">
+      <div class="top-container d-flex justify-content-between" style="background-image: url('https://source.unsplash.com/FodEsaNZs48/1600x900');">
 
-  <div class="training-header">
-    <div class="training-header__left">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    </div>
+          <div class="trainer-picture p-5">
+          <div class="training-content-info">
+            <div class="card-row">
+            <h2><%=@t_session.category%></h2><br>
+            <h5><%=@t_session.description%></h5>
+            <%= cl_image_tag @t_session.photo.key, height: 200, width: 200, crop: :fill, class: "trainer-image" %>
+            <p>I'm a University student at Manchester Met. I've been training with Boxing for 2 and a half years now after trying many other gyms. The Boxing gym I go to is open 24/7 which means I can go when I want whilst balancing university and part time work. Working out at the Boxing gym has helped improve my strength and athletic performance, which has enabled me to play top level rugby league. I find getting a workout in really helps to set me up for a productive day.</p>
+            </div>
+          </div>
+          </div>
+          <div class="spotify p-5">
+            <br><br><br><br>
+            <iframe src="https://open.spotify.com/embed/playlist/03aLchHaqljucMRPz5L8Su" width="300" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
 
-    <div class="training-header__right">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    </div>
-  </div>
-
-  <div class="training-content">
-    <div class="training-content__info">
-
-      <h2><%=@t_session.description%></h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-      <h2><%=@t_session.category%></h2>
-      <p><%=@t_session.description%></p>
-    </div>
-    <div class="training-content__cart">
-
-      <h3>Your basket is empty</h3>
-      <p>£<%=@t_session.cost%></p>
-
-            <%= simple_form_for [@t_session, @booking] do |f| %>        
-            <%= f.submit 'New Training Session', class: 'btn btn-primary' %>
-        <% end %>
-
+      </div>
     </div>
   </div>
+  <div class="middle-banner d-flex justify-content-center">
+    <h1>A <strong>HEALTHY</strong> BODY IN A <strong>HEALTHY</strong> MIND</h1>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="training-content d-flex justify-content-between">
+        <div class="container">
+          <div class="cards">
 
+            <div class="covid-card">
+              <i class="fas fa-head-side-mask"></i>
+              <p>Face Coverings Required while exercising</p>
+            </div>
 
+            <div class="covid-card">
+              <i class="fas fa-people-arrows"></i>
+              <p>Social distancing while exercising</p>
+            </div>
+
+            <div class="covid-card">
+              <i class="fas fa-pump-soap"></i>
+              <p>Hand sanitizer provided at class</p>
+            </div>
+              <div class="training-content-cart">
+                <h5>Your basket</h5>
+                <p>£<%=@t_session.cost%></p>
+                <%= simple_form_for [@t_session, @booking] do |f| %>
+                <%= f.submit 'New Training Session', class: 'btn btn-checkout' %>
+                <% end %>
+              </div>
+            </div>
+
+      </div>
+    </div>
+  </div>
 </div>
+
+
 

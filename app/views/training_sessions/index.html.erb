@@ -17,17 +17,28 @@
   </div>
 
 
-</div>
 
-<div class="index-container border-dark">
-   <div class="cards-container border-dark">
+   <div class="cards-container">
       <h2 class="section-title">Training next to you</h2>
-      <div class="container border-dark">
-        <div class="cards-container">
-          <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
-          <%= link_to "+Add a New Session", new_training_session_path %>
-          <%= render "shared/card", t_session: @t_session %>
-        </div>
+      <div class="container">
+    <div class="myBtnContainer">
+    <div class="row">
+      <% @categories[0..3].each do |category| %>
+        <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <%= link_to category, training_sessions_path(:query => category), class: css_class %>
+      <% end %>
+    </div>
+    <div class="row">
+      <% @categories[4..7].each do |category| %>
+      <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <%= link_to category, training_sessions_path(:query => category), class: css_class %>
+      <% end %>
+    </div>
+    <div class="cards-container">
+      <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
+      <%= link_to "+Add a New Session", new_training_session_path %>
+      <%= render "shared/card", t_session: @t_session %>
+
     </div>
   </div>
 
