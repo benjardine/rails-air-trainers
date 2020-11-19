@@ -28,3 +28,8 @@ puts "Creating a second session"
 boxing_session = TrainingSession.new(category: "Boxing", cost: 20, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", start_time: DateTime.new(2020,11,22,7,0,0), end_time: DateTime.new(2020,11,22,8,0,0),date: DateTime.new(2020,11,21), address: "Angel")
 boxing_session.trainer = jessica
 boxing_session.save!
+
+puts "Creating a booking"
+boxing_booking = Booking.new(customer: joe, training_session: boxing_session)
+boxing_booking.save!
+

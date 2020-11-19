@@ -50,6 +50,6 @@ class TrainingSessionsController < ApplicationController
   end
 
   def strong_params
-    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo, :id)
+    params.require(:training_session).permit(:category,:description, :cost, :start_time, :end_time, :address, :photo)
   end
 end
