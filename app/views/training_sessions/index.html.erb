@@ -5,20 +5,16 @@
     <div class="myBtnContainer flex-column">
     <div class="row">
       <% @categories[0..3].each do |category| %>
-        <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <% css_class = category == @query ? "btn glow-on-hover glow-on-hover--active" : "btn glow-on-hover"  %>
         <%= link_to category, training_sessions_path(:query => category), class: css_class %>
       <% end %>
     </div>
     <div class="row">
       <% @categories[4..7].each do |category| %>
-      <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+      <% css_class = category == @query ? "btn glow-on-hover glow-on-hover--active" : "btn glow-on-hover"  %>
         <%= link_to category, training_sessions_path(:query => category), class: css_class %>
       <% end %>
     </div>
-
-
-
-
       <div class="container">
         <div class="cards-container border-dark">
           <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
@@ -35,4 +31,3 @@
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
 </div>
-
