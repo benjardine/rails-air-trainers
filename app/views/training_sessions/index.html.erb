@@ -1,8 +1,13 @@
 
+
 <div class="index-container border-dark ">
    <div class="cards-container border-dark">
    <h2 class="section-title">Training next to you</h2>
     <div class="myBtnContainer flex-column">
+
+
+
+
     <div class="row">
       <% @categories[0..3].each do |category| %>
         <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
@@ -17,14 +22,14 @@
     </div>
 
 
+    <div class="cards-container">
+      <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
+      <%= link_to "+Add a New Session", new_training_session_path %>
+      <%= render "shared/card", t_session: @t_session %>
 
-      <div class="container">
-        <div class="cards-container border-dark">
-          <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
-          <%= link_to "+Add a New Session", new_training_session_path %>
-          <%= render "shared/card", t_session: @t_session %>
-        </div>
-      </div>
+    </div>
+  </div>
+
   </div>
 </div>
   <div class="map border">
