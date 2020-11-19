@@ -2,7 +2,13 @@
 
 
   <div class="card-product">
-    <%= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>
+    <% if t_session.photo.attached?  %>
+      <%= cl_image_tag t_session.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+      http://res.cloudinary.com/dzyd1ynmn/image/upload/c_fill,h_300,w_400/1askgpvmvupv9jbodyzmcujo6cva
+    <% end %>
+
 
     <div class="product-text">
       <div class="card-product-infos filterDiv t_session.category">
