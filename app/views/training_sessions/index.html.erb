@@ -16,7 +16,8 @@
     </div>
     <div class="row">
       <% @categories[4..7].each do |category| %>
-        <%= link_to category, training_sessions_path(:query => category), class:"btn btn-category" %>
+      <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <%= link_to category, training_sessions_path(:query => category), class: css_class %>
       <% end %>
     </div>
     <div class="cards-container">
