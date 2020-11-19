@@ -13,4 +13,8 @@
   font-weight: light;
   font-family: "Helvetica";
   transition: opacity 0.3s ease;
+
+  &--active {
+    background-color: red;
+  }
 }

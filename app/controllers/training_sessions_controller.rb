@@ -2,17 +2,19 @@ class TrainingSessionsController < ApplicationController
   before_action :set_training_session, only: [ :update, :show]
 
   def index
+    @categories = ["Yoga", "Running", "Boxing", "Weights", "Kettle Bells", "Spinning", "Kickboxing", "Pilates"]
     if params[:query].present?
       @t_sessions = TrainingSession.where("category ILIKE ?", "%#{params[:query]}%")
+      @markers = @t_sessions.geocoded.map do |t_session|
+        {
+          lat: t_session.latitude,
+          lng: t_session.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { t_session: t_session })
+        }
+      end
+        @query = params[:query]
     else
-      @t_sessions = TrainingSession.all
-    end
-    @markers = @t_sessions.geocoded.map do |t_session|
-      {
-        lat: t_session.latitude,
-        lng: t_session.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { t_session: t_session })
-      }
+      @t_sessions = []
     end
   end
 
