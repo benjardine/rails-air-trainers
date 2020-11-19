@@ -3,7 +3,7 @@ class TrainingSessionsController < ApplicationController
 
   def index
     if params[:query].present?
-      @t_sessions = TrainingSession.where(category: params[:query])
+      @t_sessions = TrainingSession.where("category ILIKE ?", "%#{params[:query]}%")
     else
       @t_sessions = TrainingSession.all
     end

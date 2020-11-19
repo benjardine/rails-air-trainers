@@ -5,6 +5,15 @@
 <a class="btn btn-ghost" href="<%= training_sessions_index_path%>">FIND YOUR <STRONG>AIR</STRONG>TRAINER NOW</a>
 </div>
 
+<%= form_tag training_sessions_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a session"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="card-container">
 <h1>Our Most Popular</h1>
   <div class="row">
