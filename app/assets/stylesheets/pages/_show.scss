@@ -1,0 +1,95 @@
+@import "components/navbar";
+@import "components/training";
+
+.btn-checkout {
+  color: white;
+  background-color: #485159;
+}
+
+.training-content {
+  background-color: #D4D9D2;
+}
+
+.training-content-info {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  width: 60%;
+}
+
+.training-content-cart {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.training-content-info p {
+  font-size: 10px;
+}
+
+.training-content-info {
+  background-color: #128792;
+  position: absolute;
+  top: 200px;
+  width: 800px;
+}
+
+.trainer-image {
+  border-radius: 50%;
+  position: absolute;
+  left: 650px;
+  bottom: 140px;
+}
+
+.spotify {
+  margin-right: 100px;
+}
+
+.spotify iframe {
+ border-radius: 5px;
+}
+
+.middle-banner {
+background-color: #128792;
+color: white;
+padding: 10px;
+font-family: "Helvetica";
+font-size: 10px;
+}
+
+.middle-banner h1 {
+
+font-size: 25px;
+}
+
+.top-container {
+  background-image: url('images/b_w_gym_backgorund.jpg');
+}
+
+.top-container {
+  height: 650px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.covid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 30px;
+    background-color: #D4D9D2;
+    text-align: center;
+    color: #128792;
+
+}
+
+.covid-card i {
+  color: #485159;
+  font-size: 40px;
+  padding: 20px;
+}
