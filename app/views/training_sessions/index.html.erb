@@ -1,39 +1,42 @@
 
 
+<div class="myBtnContainer flex-column">
+
+  <div class="row">
+  <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-category" %>
+  <%= link_to "Boxing", training_sessions_path(:query => "Boxing"), class:"btn btn-category" %>
+  <%= link_to "Weights", training_sessions_path(:query => "Weights"), class:"btn btn-category" %>
+  <%= link_to "Kettle Bells", training_sessions_path(:query => "Kettle Bells"), class:"btn btn-category" %>
+  </div>
+
+  <div class="row">
+  <%= link_to "Running", training_sessions_path(:query => "Running"), class:"btn btn-category" %>
+  <%= link_to "Spinning", training_sessions_path(:query => "Spinning"), class:"btn btn-category" %>
+  <%= link_to "Kickboxing", training_sessions_path(:query => "Kickboxing"), class:"btn btn-category" %>
+  <%= link_to "Pilates", training_sessions_path(:query => "Pilates"), class:"btn btn-category" %>
+  </div>
 
 
-<div class="index-container">
+</div>
 
-   <div class="cards-container">
+<div class="index-container border-dark">
+   <div class="cards-container border-dark">
       <h2 class="section-title">Training next to you</h2>
-      <div class="container">
-    <div class="myBtnContainer">
-
-    <div class="row">
-    <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-category" %>
-    <%= link_to "Boxing", training_sessions_path(:query => "Boxing"), class:"btn btn-category" %>
-    <%= link_to "Weights", training_sessions_path(:query => "Weights"), class:"btn btn-category" %>
-    <%= link_to "Kettle Bells", training_sessions_path(:query => "Kettle Bells"), class:"btn btn-category" %>
-    </div>
-    <div class="row">
-
-    <%= link_to "Running", training_sessions_path(:query => "Running"), class:"btn btn-category" %>
-    <%= link_to "Spinning", training_sessions_path(:query => "Spinning"), class:"btn btn-category" %>
-    <%= link_to "Kickboxing", training_sessions_path(:query => "Kickboxing"), class:"btn btn-category" %>
-    <%= link_to "Pilates", training_sessions_path(:query => "Pilates"), class:"btn btn-category" %>
-    </div>
-    <div class="cards-container">
-      <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
-      <%= link_to "+Add a New Session", new_training_session_path %>
-      <%= render "shared/card", t_session: @t_session %>
+      <div class="container border-dark">
+        <div class="cards-container">
+          <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
+          <%= link_to "+Add a New Session", new_training_session_path %>
+          <%= render "shared/card", t_session: @t_session %>
+        </div>
     </div>
   </div>
 
   <div class="map border">
   <div id="map"
-     style="width: 100%; height: 100%;"
+     style="width: 100%; height: 90%;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   </div>
 </div>
 
