@@ -6,7 +6,7 @@
 
 .index-container {
   display: flex;
-  margin: 80px;
+  margin: 80px 0;
 }
 
 .cards-container {
@@ -16,7 +16,8 @@
 }
 
 .map {
-  width: 50%;
+  width: 100%;
+  height: 100vh;
 }
 
 body {
