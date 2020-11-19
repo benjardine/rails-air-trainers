@@ -1,4 +1,16 @@
 <div class="main-container">
+  <div class="top-header">
+    <h2>Meet your <i class="highlighted"><%=@t_session.category%></i> coach</h2>
+  </div>
+
+  <div class="training-content-cart">
+    <h5>Your basket</h5>
+    <p>£<%=@t_session.cost%></p>
+    <%= simple_form_for [@t_session, @booking] do |f| %>
+    <%= f.submit 'New Training Session', class: 'btn btn-checkout' %>
+    <% end %>
+  </div>
+
   <div class="row">
     <div class="col-12">
       <div class="top-container d-flex justify-content-between" style="background-image: url('https://source.unsplash.com/FodEsaNZs48/1600x900');">
@@ -6,15 +18,14 @@
           <div class="trainer-picture p-5">
           <div class="training-content-info">
             <div class="card-row">
-            <h2><%=@t_session.category%></h2><br>
             <h5><%=@t_session.description%></h5>
+            <h5> <time><%=@t_session.start_time%></time></h5>
             <%= cl_image_tag @t_session.photo.key, height: 200, width: 200, crop: :fill, class: "trainer-image" %>
             <p>I'm a University student at Manchester Met. I've been training with Boxing for 2 and a half years now after trying many other gyms. The Boxing gym I go to is open 24/7 which means I can go when I want whilst balancing university and part time work. Working out at the Boxing gym has helped improve my strength and athletic performance, which has enabled me to play top level rugby league. I find getting a workout in really helps to set me up for a productive day.</p>
             </div>
           </div>
           </div>
           <div class="spotify p-5">
-            <br><br><br><br>
             <iframe src="https://open.spotify.com/embed/playlist/03aLchHaqljucMRPz5L8Su" width="300" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
 
@@ -44,15 +55,8 @@
               <i class="fas fa-pump-soap"></i>
               <p>Hand sanitizer provided at class</p>
             </div>
-              <div class="training-content-cart">
-                <h5>Your basket</h5>
-                <p>£<%=@t_session.cost%></p>
-                <%= simple_form_for [@t_session, @booking] do |f| %>
-                <%= f.submit 'New Training Session', class: 'btn btn-checkout' %>
-                <% end %>
-              </div>
-            </div>
-
+          </div>
+        </div>
       </div>
     </div>
   </div>

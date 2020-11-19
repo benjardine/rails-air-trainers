@@ -1,8 +1,9 @@
 import Bideo from 'bideo.js'
-  
-const backgroundVideo = () => {
-  (function () {
 
+const backgroundVideo = () => {
+  const background = document.querySelector('#background_video');
+  if (background){
+    (function () {
     var bv = new Bideo();
     bv.init({
       // Video element
@@ -34,7 +35,9 @@ const backgroundVideo = () => {
         document.querySelector('#video_cover').style.display = 'none';
       }
     });
-  }());
+  });
+  }
+
 }
 
   export { backgroundVideo };
