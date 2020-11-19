@@ -8,19 +8,17 @@
       <h2 class="section-title">Training next to you</h2>
       <div class="container">
     <div class="myBtnContainer">
-
     <div class="row">
-    <%= link_to "Yoga", training_sessions_path(:query => "Yoga"), class:"btn btn-category" %>
-    <%= link_to "Boxing", training_sessions_path(:query => "Boxing"), class:"btn btn-category" %>
-    <%= link_to "Weights", training_sessions_path(:query => "Weights"), class:"btn btn-category" %>
-    <%= link_to "Kettle Bells", training_sessions_path(:query => "Kettle Bells"), class:"btn btn-category" %>
+      <% @categories[0..3].each do |category| %>
+        <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <%= link_to category, training_sessions_path(:query => category), class: css_class %>
+      <% end %>
     </div>
     <div class="row">
-
-    <%= link_to "Running", training_sessions_path(:query => "Running"), class:"btn btn-category" %>
-    <%= link_to "Spinning", training_sessions_path(:query => "Spinning"), class:"btn btn-category" %>
-    <%= link_to "Kickboxing", training_sessions_path(:query => "Kickboxing"), class:"btn btn-category" %>
-    <%= link_to "Pilates", training_sessions_path(:query => "Pilates"), class:"btn btn-category" %>
+      <% @categories[4..7].each do |category| %>
+      <% css_class = category == @query ? "btn btn-category btn-category--active" : "btn btn-category"  %>
+        <%= link_to category, training_sessions_path(:query => category), class: css_class %>
+      <% end %>
     </div>
     <div class="cards-container">
       <h5 class="section-title"><strong>Air</strong>Trainers in your area</h5>
