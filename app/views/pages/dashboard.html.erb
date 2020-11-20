@@ -1,1 +1,57 @@
-<h2>Im the dashboard</h2>
+<div class="dashboard-banner">
+  <h1>READY SET GO</h1>
+</div>
+
+<div class="dashboard-content">
+
+  <h2 class="dashboard-title">Your upcoming bookings</h2>
+  <div class="dashboard-upcoming-bookings">
+    <!-- Cards -->
+    <% @bookings.each do |b| %>
+      <div class="dashboard-card">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="dashboard-card-infos">
+          <h2><%= b.training_session.description %></h2>
+          <% trainer_name = (b.training_session.trainer.name).nil? ? "No data" : b.training_session.trainer.name; %>
+          <p class="light-text"> Trainer: <%= trainer_name %> </p>
+           <% date = (b.training_session.start_time).nil? ? "No data" : b.training_session.start_time; %>
+          <p><%= date.to_s(:rfc822).slice(0, 16) %></p>
+        </div>
+      </div>
+    <% end %>
+
+
+    <div class="dashboard-card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="dashboard-card-infos">
+        <h2>Product name</h2>
+      </div>
+    </div>
+
+    <div class="dashboard-card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="dashboard-card-infos">
+        <h2>Product name</h2>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <% if @t_sessions.nil? == false %>
+    <!-- User Training Session (as a coach) -->
+    <h2 class="dashboard-title">Your Training Sessions</h2>
+    <div class="dashboard-upcoming-trainings">
+      <% @t_sessions.each do |t| %>
+          <div class="dashboard-card">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="dashboard-card-infos">
+              <% raise %>
+              <h2>t.ca</h2>
+              <p>27 Dec. 2020</p>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,64 @@
+.dashboard-card {
+  padding-right: 64px;
+  overflow: hidden;
+  height: 160px;
+  background: #E6E8E5;
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 6px;
+    transition: 0.8s;
+    box-shadow: 0 0 3px 2px #545454;
+    margin-left: 4px;
+
+  }
+  img:hover {
+    cursor: pointer;
+  }
+}
+
+.dashboard-card img {
+  width: 160px;
+  object-fit: cover;
+  // transition: 0.4s;
+}
+
+.dashboard-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dashboard-card:hover {
+  img {
+    box-shadow: 0 0 3px 3px #3c8893;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  h2, p {
+    color: #128792;
+    transition: 0.4s
+  }
+}
+
+.dashboard-card p {
+
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 50%;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  transition: 0.4s;
+}
+
+.dashboard-card.light-text {
+  font-weight: 200;
+}
+
+.dashboard-card .dashboard-card-infos {
+  padding-left: 16px;
+}
+

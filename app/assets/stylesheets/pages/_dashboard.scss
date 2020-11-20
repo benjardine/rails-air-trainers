@@ -1,0 +1,46 @@
+.dashboard-banner {
+  /*font-family:*/
+  padding: 90px 0;
+  // object-fit: cover;
+  background-position: center;
+  // background-image: url('https://a0.muscache.com/im/pictures/65b539fe-ecdf-4b81-b073-eefa64fa3465.jpg?im_q=highq&amp;im_w=720');
+  background-image: url('https://cdn.shopify.com/s/files/1/0369/0263/3605/files/Add_a_heading_2_1a1cd52d-5857-4f02-bb1b-ad22be2d876c.png?v=1592751850%201920w%201080h');
+  border-bottom: 40px solid #9ccbd2;
+  h1 {
+    color: #d4d9d2;
+    text-shadow: 0 4px 2px #128792;
+    font-weight: 800;
+    font-size: 88px;
+    line-height: 93px;
+    max-width: 50px;
+    padding-left: 80px;
+  }
+}
+
+.dashboard-title {
+  color: #589da7;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-left: 80px;
+  padding-top: 48px;
+  text-shadow: 0 0.6px 0.6px grey;
+}
+
+.dashboard-upcoming-bookings, .dashboard-upcoming-trainings {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+hr {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.dashboard-content {
+  background-color: #e6e8e5;
+  border-bottom: 40px solid #9ccbd2;
+}
