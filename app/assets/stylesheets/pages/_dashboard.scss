@@ -5,7 +5,7 @@
   background-position: center;
   // background-image: url('https://a0.muscache.com/im/pictures/65b539fe-ecdf-4b81-b073-eefa64fa3465.jpg?im_q=highq&amp;im_w=720');
   background-image: url('https://cdn.shopify.com/s/files/1/0369/0263/3605/files/Add_a_heading_2_1a1cd52d-5857-4f02-bb1b-ad22be2d876c.png?v=1592751850%201920w%201080h');
-
+  border-bottom: 40px solid #9ccbd2;
   h1 {
     color: #d4d9d2;
     text-shadow: 0 4px 2px #128792;
@@ -23,7 +23,7 @@
   font-weight: 700;
   line-height: 36px;
   padding-left: 80px;
-  margin-top: 40px;
+  padding-top: 48px;
   text-shadow: 0 1px 1px white;
 }
 
@@ -41,5 +41,6 @@ hr {
 }
 
 .dashboard-content {
-    background-color: #e6e8e5;
+  background-color: #e6e8e5;
+  border-bottom: 40px solid #9ccbd2;
 }

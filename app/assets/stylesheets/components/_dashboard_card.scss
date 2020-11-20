@@ -7,11 +7,13 @@
   align-items: center;
   img {
     border-radius: 6px;
-    transition: 0.4s;
+    transition: 0.8s;
+    box-shadow: 0 0 3px 2px #545454;
+    margin-left: 4px;
+
   }
   img:hover {
     cursor: pointer;
-    box-shadow: 0 0 3px 3px #589da7;
   }
 }
 
@@ -31,11 +33,13 @@
 
 .dashboard-card:hover {
   img {
-    box-shadow: 0 0 3px 3px #78b1b9;
+    box-shadow: 0 0 3px 3px #3c8893;
     cursor: pointer;
+    transition: 0.4s;
   }
   h2, p {
     color: #128792;
+    transition: 0.4s
   }
 }
 
