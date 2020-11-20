@@ -8,7 +8,7 @@
   <div class="dashboard-upcoming-bookings">
     <!-- Cards -->
     <% @bookings.each do |b| %>
-      <%= link_to training_session_path(b.training_session) do %>
+      <%= link_to training_session_path(b.training_session), class: 'dashboard-card-link' do %>
         <div class="dashboard-card">
 
           <% if b.training_session.photo.attached?  %>
@@ -31,14 +31,14 @@
 
   <% if @t_sessions.nil? == false %>
     <!-- User Training Session (as a coach) -->
-    <h2 class="dashboard-title">Your Training Sessions</h2>
+    <h2 class="dashboard-title">Classes that you teach</h2>
     <div class="dashboard-upcoming-trainings">
       <% @t_sessions.each do |t| %>
-         <%= link_to training_session_path(t) do %>
+         <%= link_to training_session_path(t), class: 'dashboard-card-link' do %>
             <div class="dashboard-card">
 
           <% if t.photo.attached?  %>
-             <%= cl_image_tag t.photo.key, crop: :fill, class: "dashboard-card-img" %>
+             <%= cl_image_tag t.photo.key, crop: :fill,  class: "dashboard-card-img" %>
           <% else %>
             <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
           <% end %>
