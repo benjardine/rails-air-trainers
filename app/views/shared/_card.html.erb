@@ -11,7 +11,8 @@
 
 
     <div class="product-text">
-      <div class="card-product-infos ">
+      <h2><%=t_session.start_time.strftime('%A %d %B at %I:%M%p')%></h2>
+      <div class="card-product-infos d-flex justify-content-between py-2">
         <h2><%= link_to t_session.category, training_session_path(t_session.id) %></h2>
         <h2>£<%= t_session.cost %></h2>
       </div>

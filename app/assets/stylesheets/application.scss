@@ -8,8 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'mapbox-gl/dist/mapbox-gl';
-@import 'slick';
-@import 'slick-theme';
+
 // Roboto fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
@@ -18,3 +17,4 @@
 @import "pages/index";
 @import "components/_cards";
 @import "pages/show";
+@import "pages/home";

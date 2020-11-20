@@ -2,7 +2,7 @@
 <div class="index-container border-dark ">
    <div class="cards-container border-dark">
    <h2 class="section-title">Training next to you</h2>
-   <%= link_to "+Add New Session", new_training_session_path, class:"px-3"  %>
+   <%= link_to "+Add New Session", new_training_session_path, class:"px-3", id:"new-session"  %>
     <div class="all-categories">
     <div class="categories">
       <% @categories[0..3].each do |category| %>
@@ -21,13 +21,12 @@
         <%= render "shared/card", t_session: @t_session %>
     </div>
   </div>
-  <div class="map border">
-
-  <div id="map"
-     style="width: 100%; height: 100%;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+  <div class="map" id="stickymap">
+    <div id="map"
+      style="width: 100%; height: 100%;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 
   </div>
 </div>
