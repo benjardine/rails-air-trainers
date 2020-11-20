@@ -4,10 +4,11 @@
   </div>
 
   <div class="training-content-cart">
-    <h5>Your basket</h5>
-    <p>£<%=@t_session.cost%></p>
+    <h5>Basket</h5>
+    <p>Book <%=@t_session.category%> class at <%=@t_session.address%> for £<%=@t_session.cost%>?</p>
     <%= simple_form_for [@t_session, @booking] do |f| %>
-    <%= f.submit 'New Training Session', class: 'btn btn-checkout' %>
+    <%= f.submit 'book', class: 'btn btn-checkout' %>
+    <%= link_to "View Basket", dashboard_path, class: 'btn btn-checkout' %>
     <% end %>
   </div>
 
@@ -19,7 +20,7 @@
           <div class="training-content-info">
             <div class="card-row">
             <h5><%=@t_session.description%></h5>
-            <h5> <time><%=@t_session.start_time%></time></h5>
+            <h5><%=@t_session.start_time.strftime('%A %d %B at %I:%M%p')%></h5>
             <%= cl_image_tag @t_session.photo.key, height: 200, width: 200, crop: :fill, class: "trainer-image" %>
             <p>I'm a University student at Manchester Met. I've been training with Boxing for 2 and a half years now after trying many other gyms. The Boxing gym I go to is open 24/7 which means I can go when I want whilst balancing university and part time work. Working out at the Boxing gym has helped improve my strength and athletic performance, which has enabled me to play top level rugby league. I find getting a workout in really helps to set me up for a productive day.</p>
             </div>
