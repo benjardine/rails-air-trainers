@@ -15,6 +15,13 @@ class TrainingSessionsController < ApplicationController
         @query = params[:query]
     else
       @t_sessions = TrainingSession.all
+      @markers = @t_sessions.geocoded.map do |t_session|
+        {
+          lat: t_session.latitude,
+          lng: t_session.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { t_session: t_session })
+        }
+      end
     end
   end
 

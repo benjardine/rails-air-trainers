@@ -7,13 +7,22 @@
 
 .index-container {
   display: flex;
-  margin: 80px 0;
+  margin: 80px 30px;
 }
 
 .cards-container {
   width: 90%;
-  padding: 20px;
   margin: 20px;
+}
+
+.all-categories{
+  padding-left: 4vh;
+}
+
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .map {
@@ -26,9 +35,11 @@ body {
 }
 
 .section-title {
-  font-family: 'Roboto', sans-serif;
-  padding: 20px;
-}
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 45px;
+  font-weight: 800;
+  font-family: 'Bebas Neue', cursive;
+  }
 
 .myBtnContainer {
   background-color: white;
