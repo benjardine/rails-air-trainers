@@ -19,6 +19,7 @@
 
 .dashboard-card img {
   width: 160px;
+  height: 127px;
   object-fit: cover;
   // transition: 0.4s;
 }
@@ -39,7 +40,11 @@
   }
   h2, p {
     color: #128792;
-    transition: 0.4s
+    transition: 0.4s;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
   }
 }
 

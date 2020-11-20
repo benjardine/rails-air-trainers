@@ -8,34 +8,20 @@
   <div class="dashboard-upcoming-bookings">
     <!-- Cards -->
     <% @bookings.each do |b| %>
-      <div class="dashboard-card">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="dashboard-card-infos">
-          <h2><%= b.training_session.description %></h2>
-          <% trainer_name = (b.training_session.trainer.name).nil? ? "No data" : b.training_session.trainer.name; %>
-          <p class="light-text"> Trainer: <%= trainer_name %> </p>
-           <% date = (b.training_session.start_time).nil? ? "No data" : b.training_session.start_time; %>
-          <p><%= date.to_s(:rfc822).slice(0, 16) %></p>
+      <%= link_to training_session_path(b.training_session) do %>
+        <div class="dashboard-card">
+           <%= cl_image_tag b.training_session.photo.key, crop: :fill, class: "dashboard-card-img" %>
+          <div class="dashboard-card-infos">
+            <h2><%= b.training_session.description %></h2>
+            <% trainer_name = (b.training_session.trainer.name).nil? ? "No data" : b.training_session.trainer.name; %>
+            <p class="light-text"> Trainer: <%= trainer_name %> </p>
+             <% date = (b.training_session.start_time).nil? ? "No data" : b.training_session.start_time; %>
+            <p><%= date.to_s(:rfc822).slice(0, 16) %></p>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-
-
-    <div class="dashboard-card">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="dashboard-card-infos">
-        <h2>Product name</h2>
-      </div>
-    </div>
-
-    <div class="dashboard-card">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="dashboard-card-infos">
-        <h2>Product name</h2>
-      </div>
-    </div>
   </div>
-
   <hr />
 
   <% if @t_sessions.nil? == false %>
@@ -43,15 +29,17 @@
     <h2 class="dashboard-title">Your Training Sessions</h2>
     <div class="dashboard-upcoming-trainings">
       <% @t_sessions.each do |t| %>
-          <div class="dashboard-card">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-            <div class="dashboard-card-infos">
-              <% raise %>
-              <h2>t.ca</h2>
-              <p>27 Dec. 2020</p>
+         <%= link_to training_session_path(t) do %>
+            <div class="dashboard-card">
+                <%= cl_image_tag t.photo.key, crop: :fill, class: "dashboard-card-img" %>
+              <div class="dashboard-card-infos">
+                <h2><%= t.description %></h2>
+                <p><%= t.start_time.to_s(:rfc822).slice(0, 16) %></p>
+              </div>
             </div>
-          </div>
+        <% end %>
       <% end %>
     </div>
   <% end %>
+
 </div>
