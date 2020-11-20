@@ -1,5 +1,5 @@
 <div class="dashboard-banner">
-  <h1>READY TO TRAIN?</h1>
+  <h1>READY SET GO</h1>
 </div>
 
 <div class="dashboard-content">
@@ -11,9 +11,9 @@
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="dashboard-card-infos">
         <h2><%= @bookings.first.training_session.description %></h2>
-        <o>Trainer: <%= @bookings.first.training_session.trainer.name %>
-        <p><%= @bookings.first.training_session.start_time %></p>
-        <p><%= @bookings.first.training_session.address %></p>
+        Trainer: <%= @bookings.first.training_session.trainer.name %>
+          <% date = @bookings.first.training_session.start_time %>
+        <p><%= date.to_s(:rfc822).slice(0, 16) %></p>
       </div>
     </div>
 
