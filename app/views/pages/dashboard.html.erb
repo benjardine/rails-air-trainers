@@ -10,7 +10,12 @@
     <% @bookings.each do |b| %>
       <%= link_to training_session_path(b.training_session) do %>
         <div class="dashboard-card">
-           <%= cl_image_tag b.training_session.photo.key, crop: :fill, class: "dashboard-card-img" %>
+
+          <% if b.training_session.photo.attached?  %>
+            <%= cl_image_tag b.training_session.photo.key, crop: :fill, class: "dashboard-card-img" %>
+          <% else %>
+            <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+          <% end %>
           <div class="dashboard-card-infos">
             <h2><%= b.training_session.description %></h2>
             <% trainer_name = (b.training_session.trainer.name).nil? ? "No data" : b.training_session.trainer.name; %>
@@ -31,7 +36,13 @@
       <% @t_sessions.each do |t| %>
          <%= link_to training_session_path(t) do %>
             <div class="dashboard-card">
-                <%= cl_image_tag t.photo.key, crop: :fill, class: "dashboard-card-img" %>
+
+          <% if t.photo.attached?  %>
+             <%= cl_image_tag t.photo.key, crop: :fill, class: "dashboard-card-img" %>
+          <% else %>
+            <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+          <% end %>
+
               <div class="dashboard-card-infos">
                 <h2><%= t.description %></h2>
                 <p><%= t.start_time.to_s(:rfc822).slice(0, 16) %></p>
