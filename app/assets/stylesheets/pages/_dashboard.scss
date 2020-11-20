@@ -7,7 +7,7 @@
   background-image: url('https://cdn.shopify.com/s/files/1/0369/0263/3605/files/Add_a_heading_2_1a1cd52d-5857-4f02-bb1b-ad22be2d876c.png?v=1592751850%201920w%201080h');
   border-bottom: 40px solid #9ccbd2;
   h1 {
-    color: #d4d9d2;
+    color: #f9f693;
     text-shadow: 0 4px 2px #128792;
     font-weight: 800;
     font-size: 88px;
@@ -19,7 +19,7 @@
 
 .dashboard-title {
   color: #589da7;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 36px;
   padding-left: 80px;
@@ -33,6 +33,10 @@
   margin-left: 80px;
   margin-top: 40px;
   margin-bottom: 40px;
+  a {
+    text-decoration: none;
+    color: grey;
+  }
 }
 
 hr {
