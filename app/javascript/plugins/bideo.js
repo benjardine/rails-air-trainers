@@ -3,15 +3,16 @@ import Bideo from 'bideo.js'
 const backgroundVideo = () => {
   const background = document.querySelector('#background_video');
   if (background){
-    (function () {
-    var bv = new Bideo();
+    const bv = new Bideo();
+    console.log(bv);
+    console.log('hello');
     bv.init({
       // Video element
       videoEl: document.querySelector('#background_video'),
-
+      
       // Container element
-      container: document.querySelector('#index'),
-
+      container: document.querySelector('body'),
+      
       // Resize
       resize: true,
 
@@ -31,11 +32,8 @@ const backgroundVideo = () => {
       ],
 
       // What to do once video loads (initial frame)
-      onLoad: function () {
-        document.querySelector('#video_cover').style.display = 'none';
-      }
+  
     });
-  });
   }
 
 }

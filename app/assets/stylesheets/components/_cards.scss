@@ -1,12 +1,13 @@
 .card-result {
   overflow: hidden;
-  height: 120px;
+  height: 160px;
   background: white;
   display: flex;
   align-items: center;
-  border: 6px, solid, black;
-  padding-bottom: 4vh;
-  margin-top: 4vh;
+  border: 6px, dotted, black;
+  padding-bottom: 2vh;
+  margin-top: 2vh;
+  padding-right: 2vh;
 }
 
 // .card-result:hover {
@@ -24,18 +25,26 @@
 }
 
 .card-result h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
+.card-result a {
+  text-decoration: none;
+}
+
+.a{
+  text-decoration: none;
+}
+
 .card-result p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  padding: 0;
+  
 }
 
 .card-result .card-result-infos {
@@ -45,10 +54,14 @@
 .card-result-infos {
   display: flex;
   justify-content: space-between;
-  
+ 
+.card-produc-infos{
+  width: 100%;
+}
 }
 .product-text {
   width: 100%;
+  height: 80%;
 }
 
 .product-text p {
