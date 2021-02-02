@@ -1,5 +1,5 @@
-https://img.shields.io/github/languages/code-size/benjardine/rails-air-trainers
-https://img.shields.io/github/languages/top/benjardine/rails-air-trainers
+
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/benjardine/rails-air-trainers"><img alt="GitHub Code Size" src="https://img.shields.io/github/languages/code-size/benjardine/rails-air-trainers">
 
 Rails app generated with lewagon/rails-templates, created by the Le Wagon coding bootcamp team.
 
